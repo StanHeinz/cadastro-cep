@@ -1,0 +1,62 @@
+<fieldset [disabled]="isLoading">
+    <body>
+        <div class="container">
+        </div>
+        <Form class="container">
+            <div class="row box-cadastro">
+              <div class="col-12">
+                    <h3 class="text-center">Por favor, insira um CEP válido</h3> 
+                    <br>
+                <form class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="cep">CEP</label>
+                    </div>
+                    <div class="form-group mx-sm-1 mb-2">
+                        <input type="cep" class="form-control" id="cep"  placeholder="00000-000" [(ngModel)]="cep.cep" name="cep" mask="00000-000">
+                    </div>
+            
+                    <div class="form-group mx-sm-1 mb-2">
+                        <button type="button" class="btn btn-primary" (click)="buscar()" [disabled]="isLoading">Buscar</button>
+                    </div>
+            
+                </form> <br>
+           
+                <div class="form-group">
+    
+                     <label for="logradouro">Logradouro</label>
+                    <div class="form-group">
+                     
+                        <input type="logradouro" class="form-control" id="logradouro"  placeholder="Logradouro" [(ngModel)]="cep.logradouro" name="logradouro">
+                        <br>
+                        <label for="complemento">Complemento</label>
+                        <input type="complemento" class="form-control" id="complemento"  placeholder="Complemento" [(ngModel)]="cep.complemento" name="complemento">
+                   
+                    </div>
+                    <br>
+                    
+                <form class="form-inline">
+                    <div class="form-group mx-sm-3 mb-5">
+                     <label for="cidade">Cidade</label>
+                    </div>
+
+                    <div class="form-group mx-sm-3 mb-5">
+                     <input type="cidade" class="form-control" id="cidade"  placeholder="Cidade" [(ngModel)]="cep.cidade" name="cidade">
+                    </div>
+
+                    <div class="form-group mx-sm-2 mb-5">
+                     <label for="bairro">Bairro</label>
+                    </div>
+
+                    <div class="form-group mx-sm-2 mb-5">
+                     <input type="bairro" class="form-control" id="bairro"  placeholder="Bairro" [(ngModel)]="cep.bairro" name="bairro">
+                    </div>
+
+               
+                </form>  
+                
+                </div>
+              </div>
+            </div>
+        </Form>
+    </body>    
+ </fieldset>
